@@ -1,0 +1,7 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="nav"><a href="/">← Dashboard</a></div>
+<div class="container"><h2>History</h2>
+{% for h in histories %}
+<div class="result"><b>{{h.category}} - Rs.{{h.budget}} - {{h.query}}</b><br><small>{{h.created_at}}</small><pre>{{h.result[:500]}}...</pre></div>
+{% endfor %}
+</div></body></html>

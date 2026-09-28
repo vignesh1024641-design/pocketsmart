@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="nav"><a href="/">← Dashboard</a></div>
+<div class="container">
+<h2>🏠 Home Interior Planner</h2>
+<form action="/generate-home" method="post">
+<input name="budget" type="number" placeholder="Budget Rs. e.g. 50000" required>
+<input name="room_type" placeholder="Room Type - Living, Bedroom" required>
+<select name="style"><option>Modern</option><option>Traditional</option><option>Minimalist</option></select>
+<button type="submit">Generate Recommendations</button>
+</form>
+{% if result %}<div class="result"><h3>Recommendations for Rs.{{budget}}</h3><pre>{{result}}</pre></div>{% endif %}
+</div></body></html>

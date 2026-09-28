@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <span class="eyebrow">
+            SMART BUDGET ASSISTANT
+        </span>
+
+        <h1>
+            Plan smarter.
+            Spend with purpose.
+        </h1>
+
+        <p>
+            PocketSmart AI turns your budget
+            and preferences into structured
+            recommendations for home interiors,
+            parties and jewelry.
+        </p>
+
+        <div class="actions">
+
+            {% if user %}
+
+                <a
+                    class="button"
+                    href="/dashboard"
+                >
+                    Open Dashboard
+                </a>
+
+            {% else %}
+
+                <a
+                    class="button"
+                    href="/register"
+                >
+                    Get Started
+                </a>
+
+                <a
+                    class="button secondary"
+                    href="/login"
+                >
+                    Login
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div>💰</div>
+
+        <strong>
+            Budget-aware
+        </strong>
+
+        <span>
+            Recommendations are designed
+            around your target budget.
+        </span>
+
+
+        <div>✨</div>
+
+        <strong>
+            AI-powered
+        </strong>
+
+        <span>
+            Gemini can interpret text and
+            optional outfit images.
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="grid three">
+
+    <article class="card">
+
+        <div class="icon">
+            🏠
+        </div>
+
+        <h2>
+            Home Interior
+        </h2>
+
+        <p>
+            Furniture, lighting and decor
+            matched to room, style and budget.
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="icon">
+            🎉
+        </div>
+
+        <h2>
+            Party Planner
+        </h2>
+
+        <p>
+            Allocate spending across food,
+            venue and decoration.
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="icon">
+            💎
+        </div>
+
+        <h2>
+            Jewelry Planner
+        </h2>
+
+        <p>
+            Match jewelry ideas to occasion,
+            outfit and optional image cues.
+        </p>
+
+    </article>
+
+</section>
+
+{% endblock %}

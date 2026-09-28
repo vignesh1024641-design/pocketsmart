@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="nav"><a href="/">← Dashboard</a></div>
+<div class="container">
+<h2>💍 Jewelry Planner</h2>
+<form action="/generate-jewelry" method="post" enctype="multipart/form-data">
+<input name="budget" type="number" placeholder="Budget Rs. 15000" required>
+<input name="occasion" placeholder="Occasion - Wedding, Office" required>
+<input name="outfit" placeholder="Outfit Description - Red Saree" required>
+<label>Upload Outfit Image (optional):</label>
+<input type="file" name="image" accept="image/*">
+<button>Generate Jewelry Suggestions</button>
+</form>
+{% if result %}<div class="result"><pre>{{result}}</pre></div>{% endif %}
+</div></body></html>
