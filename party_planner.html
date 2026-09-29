@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="nav"><a href="/">← Dashboard</a></div>
+<div class="container">
+<h2>🎉 Party Planner</h2>
+<form action="/generate-party" method="post">
+<input name="budget" type="number" placeholder="Budget Rs. 20000" required>
+<input name="event_type" placeholder="Event - Birthday, Wedding" required>
+<input name="guests" type="number" placeholder="Guests - 50" required>
+<button>Generate Party Plan</button>
+</form>
+{% if result %}<div class="result"><pre>{{result}}</pre></div>{% endif %}
+</div></body></html>
